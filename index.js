@@ -8,6 +8,7 @@ let myLeads = [];
 //input element
 const inputEl = document.getElementById("input-el");
 const inputBtn = document.getElementById("input-btn");
+const ulEl = document.getElementById("ul-el")
 
 
 
@@ -18,3 +19,15 @@ const handleButtonClicked = () => {
 }
 
 inputBtn.addEventListener("click", handleButtonClicked);
+
+for (let i = 0; i < myLeads.length; i++) {
+    ulEl.innerHTML += "<li>" + myLeads[i] + "</li>"
+    
+    //alternative to innerHTML:
+    // 1. create element
+    // 2. set text content
+    // 3. append to ul
+    // const li = document.createElement("li")
+    // li.textContent = myLeads[i]
+    // ulEl.append(li)
+    }
